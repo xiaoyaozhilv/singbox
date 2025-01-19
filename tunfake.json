@@ -25,9 +25,10 @@
  {
    "servers": 
    [
-    {"tag": "dns_direct", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_direct", "detour": "🎯 全球直连"},
-    {"tag": "dns_public", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_direct", "detour": "🎯 全球直连"},
-    {"tag": "dns_proxy", "address": "tls://1.1.1.1", "strategy": "ipv4_only", "client_subnet": "113.121.248.1", "detour": "🚀 节点选择"},
+    {"tag": "dns_direct", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_default", "detour": "🎯 全球直连"},
+    {"tag": "dns_default", "address": "223.5.5.5", "detour": "🎯 全球直连"},
+    {"tag": "dns_public", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_default", "detour": "🎯 全球直连"},
+    {"tag": "dns_proxy", "address": "tls://1.1.1.1", "strategy": "ipv4_only", "detour": "🚀 节点选择"},
     {"tag": "fakeip", "address": "fakeip"}
    ],
    "rules": 
