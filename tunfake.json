@@ -25,7 +25,7 @@
  {
    "servers": 
    [
-    {"tag": "dns_public", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_direct", "detour": "🎯 全球直连"},
+    {"tag": "dns_direct", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_direct", "detour": "🎯 全球直连"},
     {"tag": "dns_public", "address": "https://dns.alidns.com/dns-query", "address_resolver": "dns_direct", "detour": "🎯 全球直连"},
     {"tag": "dns_proxy", "address": "tls://1.1.1.1", "strategy": "ipv4_only", "client_subnet": "113.121.248.1", "detour": "🚀 节点选择"},
     {"tag": "fakeip", "address": "fakeip"}
@@ -45,10 +45,16 @@
 
 "inbounds": [
   {
-    "type": "tproxy",
-    "tag": "tproxy-in",
-    "listen": "0.0.0.0",
-    "listen_port": 7895
+    "tag": "tun-in",
+    "type": "tun",
+    "address": [
+      "172.19.0.1/30",
+      "fdfe:dcba:9876::1/126"
+    ],
+    "mtu": 9000,
+    "auto_route": true,
+    "auto_redirect": true,
+    "strict_route": true
   },
   {
     "tag": "mixed-in",
@@ -99,7 +105,6 @@
  {
    "auto_detect_interface": true,
    "final": "🐠 漏网之鱼",
-   "default_mark": 666,
    "rules": 
    [
      {"action": "sniff"},
