@@ -7,7 +7,7 @@
   
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9999",
+      "external_controller": "0.0.0.0:9095",
       "external_ui": "/etc/sing-box/ui",
       "secret": "",
       "external_ui_download_url": "https://ghproxy.cc/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
@@ -49,13 +49,13 @@
     "type": "tproxy",
     "tag": "tproxy-in",
     "listen": "0.0.0.0",
-    "listen_port": 7893
+    "listen_port": 7895
   },
   {
-    "type": "socks",
-    "tag": "socks-in",
+    "tag": "mixed-in",
+    "type": "mixed",
     "listen": "0.0.0.0",
-    "listen_port": 1080,
+    "listen_port": 7890,
     "users": [
     {
       "username": "admin",
