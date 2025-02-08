@@ -49,13 +49,19 @@
     "type": "tproxy",
     "tag": "tproxy-in",
     "listen": "0.0.0.0",
-    "listen_port": 7893
+    "listen_port": 7895
   },
   {
-    "type": "socks",
-    "tag": "socks-in",
-    "listen": "::",
-    "listen_port": 1080
+    "tag": "mixed-in",
+    "type": "mixed",
+    "listen": "0.0.0.0",
+    "listen_port": 7890,
+    "users": [
+    {
+      "username": "admin",
+      "password": "admin"
+    }
+   ]
   }
 ],
 
