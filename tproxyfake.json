@@ -49,13 +49,13 @@
     "type": "tproxy",
     "tag": "tproxy-in",
     "listen": "0.0.0.0",
-    "listen_port": 7895
+    "listen_port": 7893
   },
   {
     "tag": "mixed-in",
     "type": "mixed",
     "listen": "0.0.0.0",
-    "listen_port": 7890,
+    "listen_port": 1080,
     "users": [
     {
       "username": "admin",
