@@ -52,9 +52,9 @@
     "listen_port": 7893
   },
   {
-    "tag": "mixed-in",
-    "type": "mixed",
-    "listen": "0.0.0.0",
+    "tag": "socks-in",
+    "type": "socks",
+    "listen": "::",
     "listen_port": 7890
   }
 ],
